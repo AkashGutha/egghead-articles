@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { css } from "glamor";
+import { Observer } from "mobx-react";
+
 import Header from "./../Components/Header";
 import Paginator from "./../Components/Paginator";
 import SmallCardPost from "./../Components/SmallCardPost";
@@ -7,6 +9,10 @@ import LargeCardPost from "./../Components/LargeCardPost";
 import TopicsTabs from "./../Components/TopicsTabs";
 
 class LandingPage extends Component {
+  componentWillReact() {
+    console.log("I will re-render, since the todo has changed!");
+  }
+
   render() {
     return (
       <div
@@ -35,6 +41,7 @@ class LandingPage extends Component {
             alignContent: "stretch"
           })}
         >
+          <Observer>{() => <p>{this.props.store}</p>}</Observer>
           <SmallCardPost />
           <SmallCardPost />
           <SmallCardPost />
