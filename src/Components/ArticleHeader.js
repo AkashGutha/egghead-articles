@@ -31,6 +31,21 @@ class ArticleHeader extends Component {
               width: "52px"
             })}
           />
+
+          <button
+            className={css({
+              height: "52px",
+              width: "52px",
+              backgroundColor: "transparent",
+              border: "1px solid #FFFFFF",
+              color: "white",
+              borderRadius: "32px",
+              borderColor: "#aaa"
+            })}
+          >
+          search
+          </button>
+
           <button
             className={css({
               height: "40px",
@@ -43,42 +58,6 @@ class ArticleHeader extends Component {
             SUBSCRIBE
           </button>
         </div>
-
-        <p
-          className={css({
-            fontSize: "3em",
-            fontWeight: "500",
-            lineHeight: "53px",
-            marginTop: "54px"
-          })}
-        >
-          Making Programmers Badass
-        </p>
-
-        <p
-          className={css({
-            opacity: "0.6",
-            color: "#FFFFFF",
-            fontSize: "1.5em",
-            lineHeight: "32px",
-            marginTop: "20px"
-          })}
-        >
-          The Official Egghead.io Knowledge Hub
-        </p>
-        <input
-          type="text"
-          className={css({
-            height: "48px",
-            width: " 460px",
-            backgroundColor: "#FFFFFF",
-            alignSelf: "center",
-            paddingLeft: "48px",
-            marginTop: "40px",
-            fontSize: "15px"
-          })}
-          placeholder="Search posts, authors, courses,..."
-        />
       </div>
     );
   }

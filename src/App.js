@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route } from "react-router";
 import LandingPage from "./Pages/LandingPage";
+import ArticleDetailPage from "./Pages/ArticleDetailPage";
 import Store from "./Stores/ArticelsStore";
 
 class App extends Component {
@@ -11,7 +12,7 @@ class App extends Component {
           exact
           path="/"
           render={() => {
-            return <LandingPage store={Store.articles} />;
+            return <ArticleDetailPage store={Store.articles[0]} />;
           }}
         />
       </div>
