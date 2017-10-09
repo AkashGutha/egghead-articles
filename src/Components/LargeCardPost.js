@@ -61,7 +61,8 @@ class LargeCardPost extends Component {
               fontWeight: "bold",
               letterSpacing: "3px",
               lineHeight: "24px",
-              opacity: "0.5"
+              opacity: "0.5",
+              fontSize: "12px"
             })}
           >
             {category.toUpperCase()}
