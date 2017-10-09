@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import { css } from "glamor";
 
 class LargeCardPost extends Component {
+  truncate = (data, max_letters) => {
+    return data.slice(0, 500) + "...";
+  };
+
   render() {
     const {
       content,
@@ -65,6 +69,7 @@ class LargeCardPost extends Component {
           >
             {content.title}
           </p>
+
           <p
             className={css({
               fontWeight: "thin",
@@ -74,7 +79,7 @@ class LargeCardPost extends Component {
               marginTop: "10px"
             })}
           >
-            {content.body}
+            {this.truncate(content.body, 25)}
           </p>
 
           <div
