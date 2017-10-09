@@ -3,12 +3,21 @@ import { css } from "glamor";
 
 class LargeCardPost extends Component {
   render() {
+    const {
+      content,
+      images,
+      author,
+      category,
+      publishedAt,
+      formattedPublishedDate
+    } = this.props.article;
+
     return (
       <div
         className={css({
           display: "flex",
           flexDirection: "row",
-          margin: "10px",
+          margin: "10px"
           // ":hover": {
           //   backgroundColor: "white",
           //   boxShadow: "0px 0px 20px skyblue",
@@ -47,14 +56,14 @@ class LargeCardPost extends Component {
               opacity: "0.5"
             })}
           >
-            REACT
+            {category.toUpperCase()}
           </p>
           <p
             className={css({
               fontSize: "2em"
             })}
           >
-            Influencing The Influencer
+            {content.title}
           </p>
           <p
             className={css({
@@ -65,12 +74,7 @@ class LargeCardPost extends Component {
               marginTop: "10px"
             })}
           >
-            Audio player software is used to play back sound recordings in one
-            of the many formats available for computers today. It can also play
-            back music CDs. There is audio player software that is native to the
-            computer’s operating system (Windows, Macintosh, and Linux) and
-            there are web-based audio players. This article discusses the local
-            computer audio players.
+            {content.body}
           </p>
 
           <div
@@ -97,8 +101,8 @@ class LargeCardPost extends Component {
                 flexDirection: "column"
               })}
             >
-              <p>Walter Parker</p>
-              <p>27 Jul 2017</p>
+              <p>{author}</p>
+              <p>{formattedPublishedDate}</p>
             </div>
           </div>
         </div>

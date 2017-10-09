@@ -3,6 +3,15 @@ import { css } from "glamor";
 
 class SmallCardPost extends Component {
   render() {
+    const {
+      content,
+      images,
+      author,
+      category,
+      publishedAt,
+      formattedPublishedDate
+    } = this.props.article;
+
     return (
       <div
         className={css({
@@ -38,14 +47,14 @@ class SmallCardPost extends Component {
             opacity: "0.5"
           })}
         >
-          REACT
+          {category.toUpperCase()}
         </p>
         <p
           className={css({
             fontSize: "1.5em"
           })}
         >
-          Influencing The Influencer
+          {content.title}
         </p>
         <p
           className={css({
@@ -55,7 +64,7 @@ class SmallCardPost extends Component {
             opacity: "0.5"
           })}
         >
-          Space The Final Frontier
+          {content.subtitle}
         </p>
 
         <div
@@ -82,8 +91,8 @@ class SmallCardPost extends Component {
               alignSelf: "center"
             })}
           >
-            <p>Walter Parker</p>
-            <p>27 Jul 2017</p>
+            <p>{author}</p>
+            <p>{formattedPublishedDate}</p>
           </div>
         </div>
       </div>
