@@ -109,11 +109,28 @@ class LargeCardPost extends Component {
             <div
               className={css({
                 display: "flex",
-                flexDirection: "column"
+                flexDirection: "column",
+                alignSelf: "center",
+                marginLeft: "12px"
               })}
             >
-              <p>{author}</p>
-              <p>{formattedPublishedDate}</p>
+              <p
+                className={css({
+                  fontSize: "14px",
+                  lineHeight: "20px"
+                })}
+              >
+                {author}
+              </p>
+              <p
+                className={css({
+                  fontSize: "12px",
+                  lineHeight: "20px",
+                  opacity: "0.4"
+                })}
+              >
+                {formattedPublishedDate}
+              </p>
             </div>
           </div>
         </div>
