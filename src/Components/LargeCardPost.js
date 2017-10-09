@@ -3,7 +3,11 @@ import { css } from "glamor";
 
 class LargeCardPost extends Component {
   truncate = (data, max_letters) => {
-    return data.slice(0, 500) + "...";
+    if (data.length > max_letters) {
+      return data.slice(0, max_letters) + "...";
+    } else {
+      return data;
+    }
   };
 
   render() {
@@ -76,10 +80,11 @@ class LargeCardPost extends Component {
               opacity: "0.5",
               height: "290px",
               textAlign: "justify",
-              marginTop: "10px"
+              marginTop: "10px",
+              lineHeight: "24px"
             })}
           >
-            {this.truncate(content.body, 25)}
+            {this.truncate(content.body, 500)}
           </p>
 
           <div

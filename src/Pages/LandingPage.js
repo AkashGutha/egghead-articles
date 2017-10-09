@@ -6,6 +6,7 @@ import Header from "./../Components/Header";
 import Paginator from "./../Components/Paginator";
 import SmallCardPost from "./../Components/SmallCardPost";
 import LargeCardPost from "./../Components/LargeCardPost";
+import TextOnlyCardPost from "./../Components/TextOnlyCardPost";
 import TopicsTabs from "./../Components/TopicsTabs";
 
 const LandingPageObserver = observer(
@@ -46,10 +47,12 @@ const LandingPageObserver = observer(
             })}
           >
             {articles.map((article, index) => {
-              if(index === 3){
-                return <LargeCardPost article={article}/>
-              }else{
-                return <SmallCardPost article={article} />
+              if (index === 3) {
+                return <LargeCardPost article={article} />;
+              } else if (index >= 10) {
+                return <TextOnlyCardPost article={article} />;
+              } else {
+                return <SmallCardPost article={article} />;
               }
             })}
           </section>
