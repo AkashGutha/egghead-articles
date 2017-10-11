@@ -9,6 +9,6 @@ export var loadArticles = options => {
       article.formattedPublishedDate = formattedDate;
       return article;
     });
-    setTimeout(() => resolve(articles), 2000);
+    setTimeout(() => resolve(articles), 200);
   });
 };

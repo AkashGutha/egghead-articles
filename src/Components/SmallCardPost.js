@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { css } from "glamor";
 
+import { categoryTextStyle } from "./../Styles/TextStyles";
+
 class SmallCardPost extends Component {
   render() {
     const {
@@ -18,14 +20,7 @@ class SmallCardPost extends Component {
           display: "flex",
           flexDirection: "column",
           padding: "10px",
-          width: "370px",
-          ":hover": {
-            backgroundColor: "white",
-            boxShadow: "0px 0px 20px skyblue",
-            transform: "scale(1.1, 1.05)",
-            zIndex: "2",
-            transition: "0.2s ease-out"
-          }
+          width: "370px"
         })}
       >
         <div
@@ -37,18 +32,7 @@ class SmallCardPost extends Component {
           })}
         />
 
-        <p
-          className={css({
-            marginTop: "24px",
-            fontWeight: "bold",
-            letterSpacing: "3px",
-            lineHeight: "24px",
-            opacity: "0.5",
-            fontSize: "12px"
-          })}
-        >
-          {category.toUpperCase()}
-        </p>
+        <p className={categoryTextStyle}>{category.toUpperCase()}</p>
         <p
           className={css({
             fontSize: "1.5em"

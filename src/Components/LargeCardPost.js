@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { css } from "glamor";
+import { categoryTextStyle } from "./../Styles/TextStyles";
 
 class LargeCardPost extends Component {
   truncate = (data, max_letters) => {
@@ -25,14 +26,7 @@ class LargeCardPost extends Component {
         className={css({
           display: "flex",
           flexDirection: "row",
-          margin: "10px",
-          ":hover": {
-            backgroundColor: "white",
-            boxShadow: "0px 0px 20px skyblue",
-            transform: "scale(1.2, 1.05)",
-            zIndex: "2",
-            transition: "0.2s ease-out"
-          }
+          margin: "10px"
         })}
       >
         <div
@@ -55,14 +49,7 @@ class LargeCardPost extends Component {
           })}
         >
           <p
-            className={css({
-              marginTop: "24px",
-              fontWeight: "bold",
-              letterSpacing: "3px",
-              lineHeight: "24px",
-              opacity: "0.5",
-              fontSize: "12px"
-            })}
+            className={categoryTextStyle}
           >
             {category.toUpperCase()}
           </p>
