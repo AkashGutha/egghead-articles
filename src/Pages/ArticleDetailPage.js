@@ -56,16 +56,18 @@ const ArticlePageObserver = observer(
             className={css({
               marginTop: "100px",
               display: "flex",
-              flexDirection: "column",
-              justifyContent: "center"
+              justifyContent: "center",
             })}
           >
+            <div className={css({
+              width: "1200px"
+            })}>
             <div
               className={css({
                 display: "flex",
                 justifyContent: "space-between",
-                marginLeft: "72px",
-                marginRight: "72px"
+                paddingLeft: "10px",
+                paddingRight:"10px"
               })}
             >
               <h1>More posts tagged React</h1>
@@ -75,12 +77,13 @@ const ArticlePageObserver = observer(
             <div
               className={css({
                 display: "flex",
-                justifyContent: "center"
+                justifyContent: "space-between"
               })}
             >
               <SmallCardPost article={article} />
               <SmallCardPost article={article} />
               <SmallCardPost article={article} />
+            </div>
             </div>
           </div>
         </div>
