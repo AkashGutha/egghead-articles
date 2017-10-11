@@ -8,7 +8,7 @@ class ArticleStore {
   }
 
   setArticles = articles => {
-    this.articles = observable(articles);
+    this.articles.push(observable(articles));
   };
 }
 
