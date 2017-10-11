@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route } from "react-router";
 import LandingPage from "./Pages/LandingPage";
+
 import ArticleDetailPage from "./Pages/ArticleDetailPage";
 import Store from "./Stores/ArticleStore";
 
