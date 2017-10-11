@@ -7,13 +7,18 @@ import ArticleHeader from "./../Components/ArticleHeader";
 import SmallCardPost from "./../Components/SmallCardPost";
 
 const ArticlePageObserver = observer(
-  class ArticlePageObserver extends Component {
+  class ArticleDetailPage extends Component {
     componentWillReact() {
       console.log("I will re-render, since the observables changed!");
     }
 
     render() {
       const article = this.props.store;
+
+      if (article === undefined) {
+        return <div />;
+      }
+
       const { body } = article.content;
 
       return (
@@ -56,34 +61,36 @@ const ArticlePageObserver = observer(
             className={css({
               marginTop: "100px",
               display: "flex",
-              justifyContent: "center",
+              justifyContent: "center"
             })}
           >
-            <div className={css({
-              width: "1200px"
-            })}>
             <div
               className={css({
-                display: "flex",
-                justifyContent: "space-between",
-                paddingLeft: "10px",
-                paddingRight:"10px"
+                width: "1200px"
               })}
             >
-              <h1>More posts tagged React</h1>
-              <h3>MORE -></h3>
-            </div>
+              <div
+                className={css({
+                  display: "flex",
+                  justifyContent: "space-between",
+                  paddingLeft: "10px",
+                  paddingRight: "10px"
+                })}
+              >
+                <h1>More posts tagged React</h1>
+                <h3>MORE -></h3>
+              </div>
 
-            <div
-              className={css({
-                display: "flex",
-                justifyContent: "space-between"
-              })}
-            >
-              <SmallCardPost article={article} />
-              <SmallCardPost article={article} />
-              <SmallCardPost article={article} />
-            </div>
+              <div
+                className={css({
+                  display: "flex",
+                  justifyContent: "space-between"
+                })}
+              >
+                <SmallCardPost article={article} />
+                <SmallCardPost article={article} />
+                <SmallCardPost article={article} />
+              </div>
             </div>
           </div>
         </div>

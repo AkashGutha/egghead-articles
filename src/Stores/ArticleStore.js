@@ -1,6 +1,4 @@
-import { extendObservable } from "mobx";
-import ArticlesData from "./../Data/Articles.json";
-import moment from "moment";
+import { observable, extendObservable } from "mobx";
 
 class ArticleStore {
   constructor() {
@@ -9,18 +7,10 @@ class ArticleStore {
     });
   }
 
-  loadArticles = options => {
-    if (options === undefined) {
-      this.articles = ArticlesData.map(article => {
-        const date = moment(new Date(article.publishedAt));
-        const formattedDate = date.format("DD MMM YYYY");
-        article.formattedPublishedDate = formattedDate;
-        return article;
-      });
-    }
+  setArticles = articles => {
+    this.articles = observable(articles);
   };
 }
 
 const store = new ArticleStore();
-store.loadArticles();
 export default store;

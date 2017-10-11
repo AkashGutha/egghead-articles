@@ -4,8 +4,15 @@ import LandingPage from "./Pages/LandingPage";
 
 import ArticleDetailPage from "./Pages/ArticleDetailPage";
 import Store from "./Stores/ArticleStore";
+import { loadArticles } from "./Services/ArticleService";
 
 class App extends Component {
+  componentWillMount() {
+    loadArticles().then(articles => {
+      Store.setArticles(articles);
+      console.log(Store.articles);
+    });
+  }
   render() {
     return (
       <div>
