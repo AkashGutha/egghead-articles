@@ -18,15 +18,14 @@ class SmallCardPost extends Component {
           display: "flex",
           flexDirection: "column",
           padding: "10px",
-          width: "370px"
-          // ":hover": {
-          //   backgroundColor: "white",
-          //   boxShadow: "0px 0px 20px skyblue",
-          //   border: "1px solid skyblue",
-          //   transform: "scale(1.05, 1.05)",
-          //   zIndex: "2",
-          //   transition: "0.2s ease-out"
-          // }
+          width: "370px",
+          ":hover": {
+            backgroundColor: "white",
+            boxShadow: "0px 0px 20px skyblue",
+            transform: "scale(1.1, 1.05)",
+            zIndex: "2",
+            transition: "0.2s ease-out"
+          }
         })}
       >
         <div
@@ -93,15 +92,23 @@ class SmallCardPost extends Component {
               marginLeft: "12px"
             })}
           >
-            <p className={css({
-              fontSize: "14px",
-              lineHeight: "20px"
-            })}>{author}</p>
-            <p className={css({
-              fontSize: "12px",
-              lineHeight: "20px",
-              opacity: "0.4"
-            })}>{formattedPublishedDate}</p>
+            <p
+              className={css({
+                fontSize: "14px",
+                lineHeight: "20px"
+              })}
+            >
+              {author}
+            </p>
+            <p
+              className={css({
+                fontSize: "12px",
+                lineHeight: "20px",
+                opacity: "0.4"
+              })}
+            >
+              {formattedPublishedDate}
+            </p>
           </div>
         </div>
       </div>

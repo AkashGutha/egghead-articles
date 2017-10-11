@@ -25,15 +25,14 @@ class LargeCardPost extends Component {
         className={css({
           display: "flex",
           flexDirection: "row",
-          margin: "10px"
-          // ":hover": {
-          //   backgroundColor: "white",
-          //   boxShadow: "0px 0px 20px skyblue",
-          //   border: "1px solid skyblue",
-          //   transform: "scale(1.05, 1.05)",
-          //   zIndex: "2",
-          //   transition: "0.2s ease-out"
-          // }
+          margin: "10px",
+          ":hover": {
+            backgroundColor: "white",
+            boxShadow: "0px 0px 20px skyblue",
+            transform: "scale(1.2, 1.05)",
+            zIndex: "2",
+            transition: "0.2s ease-out"
+          }
         })}
       >
         <div
