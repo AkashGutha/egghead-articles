@@ -1,4 +1,4 @@
-import { observable, extendObservable } from "mobx";
+import { observable, action, extendObservable } from "mobx";
 
 class ArticleStore {
   constructor() {
@@ -7,10 +7,10 @@ class ArticleStore {
     });
   }
 
-  setArticles = articles => {
-    this.articles.push(observable(articles));
-  };
+  setArticles = action(articles => {
+    this.articles = observable(articles);
+  });
 }
 
-const store = new ArticleStore();
-export default store;
+const Store = (window.store = new ArticleStore());
+export default Store;

@@ -6,17 +6,13 @@ import ReactMarkdown from "react-markdown";
 import ArticleHeader from "./../Components/ArticleHeader";
 import SmallCardPost from "./../Components/SmallCardPost";
 
-const ArticlePageObserver = observer(
-  class ArticleDetailPage extends Component {
-    componentWillReact() {
-      console.log("I will re-render, since the observables changed!");
-    }
-
+const ArticleDetailPage = observer(
+  class ArticleDetailPageCompoenet extends Component {
     render() {
-      const article = this.props.store;
+      const article = this.props.store.articles[0];
 
       if (article === undefined) {
-        return <div />;
+        return <h1> loading... </h1>;
       }
 
       const { body } = article.content;
@@ -39,12 +35,13 @@ const ArticlePageObserver = observer(
               justifyContent: "center"
             })}
           >
-            <ReactMarkdown
+            <div
               className={css({
                 width: "600px"
               })}
-              source={body}
-            />
+            >
+              <ReactMarkdown source={body} />
+            </div>
           </div>
 
           <div
@@ -99,4 +96,4 @@ const ArticlePageObserver = observer(
   }
 );
 
-export default ArticlePageObserver;
+export default ArticleDetailPage;
