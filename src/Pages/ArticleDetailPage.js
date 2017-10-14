@@ -20,6 +20,23 @@ const ArticleDetailPage = observer(
       const { author, category } = article;
       const { body, title, subtitle } = article.content;
 
+      let socialButtons = [];
+
+      for (let i = 0; i < 4; i++) {
+        socialButtons.push(
+          <div
+            className={css({
+              width: "32px",
+              height: "32px",
+              opacity: "0.6",
+              borderRadius: "16px",
+              marginRight: "16px",
+              backgroundColor: "#666"
+            })}
+          />
+        );
+      }
+
       return (
         <div
           className={css({
@@ -143,14 +160,44 @@ const ArticleDetailPage = observer(
                 width: "250px"
               })}
             >
+              <p
+                className={css({
+                  fontSize: "18px"
+                })}
+              >
+                Share this article
+              </p>
+
               <div
                 className={css({
-                  width: "104px",
-                  height: "104px",
-                  backgroundColor: "#666",
-                  borderRadius: "52px"
+                  display: "flex",
+                  flexDirection: "row",
+                  marginTop: "12px"
                 })}
-              />
+              >
+                {socialButtons}
+              </div>
+
+              <p
+                className={css({
+                  marginTop: "32px",
+                  fontSize: "18px"
+                })}
+              >
+                Newsletter
+              </p>
+              <button
+                className={css({
+                  height: "40px",
+                  width: "140px",
+                  backgroundColor: "transparent",
+                  border: "1px solid black",
+                  color: "black",
+                  marginTop: "12px"
+                })}
+              >
+                SUBSCRIBE
+              </button>
             </div>
           </div>
           {/* //#endregion: markdown  */}
