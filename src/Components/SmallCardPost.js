@@ -20,7 +20,11 @@ class SmallCardPost extends Component {
           display: "flex",
           flexDirection: "column",
           padding: "10px",
-          width: "370px"
+          width: "370px",
+          ":hover": {
+            boxShadow: "0px 0px 2px lightgray",
+            cursor: "pointer"
+          }
         })}
       >
         <div
@@ -54,7 +58,8 @@ class SmallCardPost extends Component {
         <div
           className={css({
             display: "flex",
-            flexDirection: "row"
+            flexDirection: "row",
+            marginTop: "20px"
           })}
         >
           <div

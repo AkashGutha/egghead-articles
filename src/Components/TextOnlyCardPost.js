@@ -27,15 +27,11 @@ class SmallCardPost extends Component {
           display: "flex",
           flexDirection: "column",
           padding: "10px",
-          width: "370px"
-          // ":hover": {
-          //   backgroundColor: "white",
-          //   boxShadow: "0px 0px 20px skyblue",
-          //   border: "1px solid skyblue",
-          //   transform: "scale(1.05, 1.05)",
-          //   zIndex: "2",
-          //   transition: "0.2s ease-out"
-          // }
+          width: "370px",
+          ":hover": {
+            boxShadow: "0px 0px 2px lightgray",
+            cursor: "pointer"
+          }
         })}
       >
         <p className={categoryTextStyle}>{category.toUpperCase()}</p>

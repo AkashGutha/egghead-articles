@@ -10,8 +10,21 @@ import { categoryTextStyle } from "./../Styles/TextStyles";
 
 const ArticleDetailPage = observer(
   class ArticleDetailPageCompoenet extends Component {
+    navigateToHome = () => {
+      this.props.history.push("/");
+    };
+
+    componentDidMount() {
+      console.log("article page rendered");
+    }
+
     render() {
-      const article = this.props.store.articles[0];
+      console.log(this.props);
+      const id = this.props.match.params.id;
+      console.log(id);
+      const article = this.props.store.articles.find(
+        article => article.articleId === id
+      );
 
       if (article === undefined) {
         return <h1> loading... </h1>;
@@ -25,6 +38,7 @@ const ArticleDetailPage = observer(
       for (let i = 0; i < 4; i++) {
         socialButtons.push(
           <div
+          key={i}
             className={css({
               width: "32px",
               height: "32px",
@@ -55,23 +69,22 @@ const ArticleDetailPage = observer(
             })}
           >
             <a
-              href="#"
               className={css({
-                textDecoration: "none",
+                fontSize: "16px",
+                color: "#AAA",
+                letterSpacing: "1px",
                 marginLeft: "-140px",
                 marginRight: "140px",
-                display: "block"
+                display: "block",
+                ":hover": {
+                  cursor: "pointer"
+                }
               })}
+              onClick={() => {
+                this.navigateToHome();
+              }}
             >
-              <p
-                className={css({
-                  fontSize: "16px",
-                  color: "#AAA",
-                  letterSpacing: "1px"
-                })}
-              >
-                {"< BACK"}
-              </p>
+              {"< BACK"}
             </a>
             <div
               className={css({

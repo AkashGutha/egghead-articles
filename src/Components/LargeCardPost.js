@@ -26,7 +26,11 @@ class LargeCardPost extends Component {
         className={css({
           display: "flex",
           flexDirection: "row",
-          margin: "10px"
+          padding: "10px",
+          ":hover": {
+            boxShadow: "0px 0px 2px lightgray",
+            cursor: "pointer"
+          }
         })}
       >
         <div

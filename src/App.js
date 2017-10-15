@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route } from "react-router";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Provider, observer } from "mobx-react";
 import LandingPage from "./Pages/LandingPage";
 
@@ -11,24 +11,28 @@ const App = observer(
   class AppComponent extends Component {
     componentWillMount() {
       loadArticles().then(articles => {
-        console.log("load articles..");
-        console.log(articles);
         Store.setArticles(articles);
-        console.log(Store);
       });
     }
 
     render() {
+      const routerProps = this.routerProps;
+
       return (
-        <div>
-          <Route
-            exact
-            path="/"
-            render={() => {
-              return <ArticleDetailPage store={Store} />;
-            }}
-          />
-        </div>
+        <Router onUpdate={() => window.scrollTo(0, 0)}>
+          <div>
+            <Route exact path="/">
+              <LandingPage store={Store} {...routerProps} />
+            </Route>
+            <Route
+              exact
+              path="/article/:id"
+              render={(props, article) => {
+                return <ArticleDetailPage store={Store} {...props} />;
+              }}
+            />
+          </div>
+        </Router>
       );
     }
   }
