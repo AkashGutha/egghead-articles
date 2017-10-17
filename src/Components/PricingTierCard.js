@@ -8,11 +8,11 @@ class PricingTierCard extends Component {
       <div
         className={css({
           width: "380px",
-          height: "1000px",
           display: "flex",
           flexDirection: "column",
           marginLeft: "20px",
           marginRight: "20px",
+          marginTop: "150px",
           border: "1px solid black"
         })}
       >
@@ -85,6 +85,14 @@ class PricingTierCard extends Component {
             lineHeight: "32px"
           })}
         >
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Doloremque cumque quas quo sit.</li>
+          <li>Voluptates eius debitis possimus eos?</li>
+          <li>In minima vel velit maiores.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Doloremque cumque quas quo sit.</li>
+          <li>Voluptates eius debitis possimus eos?</li>
+          <li>In minima vel velit maiores.</li>
           <li>Lorem ipsum dolor sit amet.</li>
           <li>Doloremque cumque quas quo sit.</li>
           <li>Voluptates eius debitis possimus eos?</li>
