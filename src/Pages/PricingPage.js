@@ -245,9 +245,14 @@ const PricingPageObserver = observer(
               padding: "125px",
               height: "200px",
               backgroundColor: "#f8f8f8",
-              justifyContent: "center"
+              justifyContent: "space-between",
+              alignItems: "center"
             })}
           >
+
+          <div>
+             {"<----"}
+           </div>
 
            <div className={css({
              display:"felx",
@@ -275,6 +280,9 @@ const PricingPageObserver = observer(
             >
             Frederick Tyler, Product Manager in Microsoft
             </p>
+           </div>
+           <div>
+             {"---->"}
            </div>
           </div>
 
