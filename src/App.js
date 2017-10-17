@@ -43,6 +43,7 @@ const App = observer(
               <Route exact path="/pricing">
                 <PricingPage />
               </Route>
+
             </div>
           </ScrollToTop>
         </Router>
