@@ -271,7 +271,32 @@ const PricingPageObserver = observer(
                 justifyContent: "space-between"
               })}
             >
-                {faqs}
+              {faqs}
+            </div>
+
+            <div
+              className={css({
+                backgroundColor: "#333",
+                padding: "70px",
+                color: "white",
+                marginTop: "100px"
+              })}
+            >
+              <p
+                className={css({
+                  fontSize: "28px"
+                })}
+              >
+                Got more questions?
+              </p>
+              <p
+                className={css({
+                  fontSize: "16px",
+                  marginTop: "8px"
+                })}
+              >
+                We’re here for you, leave us a message at help@egghead.io
+              </p>
             </div>
           </div>
         </div>
