@@ -2,6 +2,32 @@ import React, { Component } from "react";
 import { css } from "glamor";
 import { categoryTextStyle } from "./../Styles/TextStyles";
 
+const TimeText = ({ topText, bottomText }) => (
+  <div
+    className={css({
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center"
+    })}
+  >
+    <p
+      className={css({
+        fontSize: "46px"
+      })}
+    >
+      {topText}
+    </p>
+    <p
+      className={css({
+        fontSize: "14px"
+      })}
+    >
+      {bottomText}
+    </p>
+  </div>
+);
+
+
 class PricingTierCard extends Component {
   render() {
     return (
@@ -47,6 +73,73 @@ class PricingTierCard extends Component {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit
         </p>
 
+        {/* discount */}
+        <div
+          className={css({
+            margin: "10px -10px",
+            backgroundColor: "#888",
+            display: "flex",
+            padding: "20px 40px",
+            justifyContent: "space-between",
+            color: "white",
+            alignItems: "center",
+            background: `repeating-linear-gradient(
+              45deg,
+              #666,
+              #666 10px,
+              #333 10px,
+              #333 12px
+            )`
+          })}
+        >
+          <p className={css({ fontSize: "30px" })}>SAVE 50%</p>
+          <p className={css({ fontSize: "15px" })}>usually 299,99$</p>
+        </div>
+
+        {/* rate */}
+        <div
+          className={css({
+            border: "1px solid gray",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            borderRadius: "5px",
+            marginTop: "75px",
+            height: "100px",
+            width: "340px",
+            alignSelf:"center",
+            alignItems: "center"
+          })}
+        >
+          <div
+            className={css({
+              display: "flex",
+              marginTop: "-70px",
+              padding: "10px",
+              backgroundColor: "white"
+            })}
+          >
+            <p className={css({
+              color: "#888"
+            })}>USD</p>
+            <p className={css({
+              fontSize: "17px"
+            })}>$</p>
+            <p className={css({
+              fontSize: "52px",
+              marginTop: "-10px"
+            })}>99</p>
+            <p>50</p>
+          </div>
+
+          <p className={css({
+            color: "#AAA",
+            letterSpacing: "2px",
+            fontSize: "12px"
+          })}>PER USER / BILLED ANUALLY</p>
+        </div>
+
+        {/* level up */}
         <button
           className={css({
             width: "340px",

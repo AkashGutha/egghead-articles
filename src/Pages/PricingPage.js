@@ -30,6 +30,32 @@ const TimeText = ({ topText, bottomText }) => (
   </div>
 );
 
+const FaqQna = ({ question, answer }) => (
+  <div
+    className={css({
+      marginTop: "45px"
+    })}
+  >
+    <p
+      className={css({
+        fontSize: "22px",
+        fontWeight: "600"
+      })}
+    >
+      {question}
+    </p>
+    <p
+      className={css({
+        fontSize: "22px",
+        fontWeight: "300",
+        marginTop: "25px"
+      })}
+    >
+      {answer}
+    </p>
+  </div>
+);
+
 const PricingPageObserver = observer(
   class PricingPage extends Component {
     componentWillReact() {
@@ -37,6 +63,27 @@ const PricingPageObserver = observer(
     }
 
     render() {
+      let faqs = [];
+
+      for (let i = 0; i < 9; i++) {
+        faqs.push(
+          <div
+            className={css({
+              flexBasis: "45%"
+            })}
+          >
+            <FaqQna
+              question={"What's included with my membership?"}
+              answer={`
+                How often is new content released?
+
+                As often as our instructors crank it out! At a minimum, it’s usually weekly and we announce it via Twitter (@eggheadio), via RSS feeds, and on Facebook.
+                `}
+            />
+          </div>
+        );
+      }
+
       return (
         <div
           className={css({
@@ -45,20 +92,22 @@ const PricingPageObserver = observer(
             justifyContent: "center"
           })}
         >
+          {/* header */}
           <div
             className={css({
               display: "flex",
               paddingBottom: "0px",
               padding: "125px",
               paddingTop: "80px",
-              justifyContent: "center"
+              justifyContent: "space-between"
             })}
           >
             <p
               className={css({
                 width: "438px",
-                fontSize: "48px",
-                flexBasis: "30%"
+                fontSize: "40px",
+                flexBasis: "30%",
+                alignSelf: "center"
               })}
             >
               Invest in your programming skills
@@ -194,7 +243,7 @@ const PricingPageObserver = observer(
             className={css({
               display: "flex",
               padding: "125px",
-              backgroundColor: "#eee"
+              backgroundColor: "#f8f8f8"
             })}
           >
             <h1>FAQ</h1>
@@ -209,7 +258,6 @@ const PricingPageObserver = observer(
           {/* FAQ */}
           <div
             className={css({
-              display: "flex",
               padding: "125px"
             })}
           >
@@ -217,9 +265,14 @@ const PricingPageObserver = observer(
 
             <div
               className={css({
-                display: "flex"
+                display: "flex",
+                flexDirection: "row",
+                flexWrap: "wrap",
+                justifyContent: "space-between"
               })}
-            />
+            >
+                {faqs}
+            </div>
           </div>
         </div>
       );
