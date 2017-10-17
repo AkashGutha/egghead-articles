@@ -12,21 +12,20 @@ const TimeText = ({ topText, bottomText }) => (
   >
     <p
       className={css({
-        fontSize: "46px"
+        fontSize: "34px"
       })}
     >
       {topText}
     </p>
     <p
       className={css({
-        fontSize: "14px"
+        fontSize: "12px"
       })}
     >
       {bottomText}
     </p>
   </div>
 );
-
 
 class PricingTierCard extends Component {
   render() {
@@ -39,7 +38,8 @@ class PricingTierCard extends Component {
           marginLeft: "20px",
           marginRight: "20px",
           marginTop: "150px",
-          border: "1px solid black"
+          border: "1px solid black",
+          backgroundColor: "white"
         })}
       >
         <div
@@ -76,7 +76,8 @@ class PricingTierCard extends Component {
         {/* discount */}
         <div
           className={css({
-            margin: "10px -10px",
+            margin: "0px -10px",
+            marginTop: "32px",
             backgroundColor: "#888",
             display: "flex",
             padding: "20px 40px",
@@ -89,7 +90,33 @@ class PricingTierCard extends Component {
               #666 10px,
               #333 10px,
               #333 12px
-            )`
+            )`,
+            ":before": {
+              height: "76px",
+              width: "100px",
+              display: "block",
+              position: "absolute",
+              zIndex: "-10",
+              content: " ",
+              background: "#222",
+              marginLeft: "-40px",
+              marginTop: "-34px",
+              transform: "skewY(-18deg)",
+              transformOrigin: "top right"
+            },
+            ":after": {
+              height: "76px",
+              width: "100px",
+              display: "block",
+              position: "absolute",
+              zIndex: "-10",
+              content: " ",
+              background: "#222",
+              marginTop: "-34px",
+              transform: "skewY(18deg)",
+              transformOrigin: "top left",
+              marginLeft: "260px"
+            }
           })}
         >
           <p className={css({ fontSize: "30px" })}>SAVE 50%</p>
@@ -102,41 +129,90 @@ class PricingTierCard extends Component {
             border: "1px solid gray",
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center",
             borderRadius: "5px",
             marginTop: "75px",
-            height: "100px",
             width: "340px",
-            alignSelf:"center",
-            alignItems: "center"
+            alignSelf: "center"
           })}
         >
           <div
             className={css({
               display: "flex",
-              marginTop: "-70px",
+              marginTop: "-30px",
               padding: "10px",
-              backgroundColor: "white"
+              backgroundColor: "white",
+              alignSelf: "center"
             })}
           >
-            <p className={css({
-              color: "#888"
-            })}>USD</p>
-            <p className={css({
-              fontSize: "17px"
-            })}>$</p>
-            <p className={css({
-              fontSize: "52px",
-              marginTop: "-10px"
-            })}>99</p>
+            <p
+              className={css({
+                color: "#888"
+              })}
+            >
+              USD
+            </p>
+            <p
+              className={css({
+                fontSize: "17px"
+              })}
+            >
+              $
+            </p>
+            <p
+              className={css({
+                fontSize: "52px",
+                margin: "0 10px",
+                marginTop: "-10px"
+              })}
+            >
+              99
+            </p>
             <p>50</p>
           </div>
 
-          <p className={css({
-            color: "#AAA",
-            letterSpacing: "2px",
-            fontSize: "12px"
-          })}>PER USER / BILLED ANUALLY</p>
+          <p
+            className={css({
+              color: "#AAA",
+              letterSpacing: "2px",
+              fontSize: "12px",
+              alignSelf: "center"
+            })}
+          >
+            PER USER / BILLED ANUALLY
+          </p>
+
+          <div
+            className={css({
+              backgroundColor: "#ddd",
+              display: "flex",
+              flexDirection: "column",
+              flexBasis: "100%",
+              marginTop: "20px"
+            })}
+          >
+            <p
+              className={css({
+                marginTop: "12px",
+                marginBottom: "18px",
+                alignSelf: "center"
+              })}
+            >
+              deal ends in
+            </p>
+            <div
+              className={css({
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-around",
+                marginBottom: "12px"
+              })}
+            >
+              <TimeText topText="4" bottomText="DAYS" />
+              <TimeText topText="23" bottomText="HOURS" />
+              <TimeText topText="34" bottomText="MINUTES" />
+              <TimeText topText="45" bottomText="SECONDS" />
+            </div>
+          </div>
         </div>
 
         {/* level up */}
