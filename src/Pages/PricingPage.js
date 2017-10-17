@@ -267,7 +267,7 @@ const PricingPageObserver = observer(
                 textAlign: "center"
               })}
             >
-            “Egghead is the best training I’ve seen so far – cutting edge with the latest subjects, frameworks, languages – no bull….!”
+            “egghead is the best training I’ve seen so far – cutting edge with the latest subjects, frameworks, languages – no bull….!”
             </p>
             <p
               className={css({
