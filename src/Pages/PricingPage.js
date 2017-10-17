@@ -17,7 +17,7 @@ const PricingPageObserver = observer(
           className={css({
             display: "flex",
             flexDirection: "column",
-            justifyContent: "space-around"
+            justifyContent: "center"
           })}
         >
           <div
