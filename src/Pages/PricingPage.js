@@ -243,16 +243,39 @@ const PricingPageObserver = observer(
             className={css({
               display: "flex",
               padding: "125px",
-              backgroundColor: "#f8f8f8"
+              height: "200px",
+              backgroundColor: "#f8f8f8",
+              justifyContent: "center"
             })}
           >
-            <h1>FAQ</h1>
 
-            <div
+           <div className={css({
+             display:"felx",
+             flexBasis: "80%",
+             justifyContent: "center"
+           })}>
+           <p
               className={css({
-                display: "flex"
+                fontSize: "28px",
+                fontStyle: "italic",
+                fontWeight: "100",
+                textAlign: "center"
               })}
-            />
+            >
+            “Egghead is the best training I’ve seen so far – cutting edge with the latest subjects, frameworks, languages – no bull….!”
+            </p>
+            <p
+              className={css({
+                fontSize: "16px",
+                fontWeight: "100",
+                color: "#999",
+                marginTop: "32px",
+                textAlign: "center"
+              })}
+            >
+            Frederick Tyler, Product Manager in Microsoft
+            </p>
+           </div>
           </div>
 
           {/* FAQ */}
