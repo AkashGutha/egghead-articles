@@ -12,14 +12,16 @@ const TimeText = ({ topText, bottomText }) => (
   >
     <p
       className={css({
-        fontSize: "34px"
+        fontSize: "34px",
+        color: "#555"
       })}
     >
       {topText}
     </p>
     <p
       className={css({
-        fontSize: "12px"
+        fontSize: "12px",
+        color: "#999"
       })}
     >
       {bottomText}
