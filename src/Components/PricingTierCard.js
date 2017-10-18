@@ -269,6 +269,26 @@ class PricingTierCard extends Component {
           <li>Voluptates eius debitis possimus eos?</li>
           <li>In minima vel velit maiores.</li>
         </ul>
+
+        {/* other features */}
+        <div
+          className={css({
+            border: "1px solid #ddd",
+            display: "flex",
+            alignSelf: "center",
+            alignItems:"center",
+            justifyContent: "space-between",
+            fontSize: "15px",
+            width: "300px",
+            height: "48px",
+            margin: "15px 0px 25px 0px",
+            padding: "0px 20px"
+          })}
+        >
+          <p> + </p>
+          <p> {"all pro and premium features"} </p>
+          <p> > </p>
+        </div>
       </div>
     );
   }

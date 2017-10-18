@@ -249,41 +249,39 @@ const PricingPageObserver = observer(
               alignItems: "center"
             })}
           >
+            <div>{"<----"}</div>
 
-          <div>
-             {"<----"}
-           </div>
-
-           <div className={css({
-             display:"felx",
-             flexBasis: "80%",
-             justifyContent: "center"
-           })}>
-           <p
+            <div
               className={css({
-                fontSize: "28px",
-                fontStyle: "italic",
-                fontWeight: "100",
-                textAlign: "center"
+                display: "felx",
+                flexBasis: "80%",
+                justifyContent: "center"
               })}
             >
-            “egghead is the best training I’ve seen so far – cutting edge with the latest subjects, frameworks, languages – no bull….!”
-            </p>
-            <p
-              className={css({
-                fontSize: "16px",
-                fontWeight: "100",
-                color: "#999",
-                marginTop: "32px",
-                textAlign: "center"
-              })}
-            >
-            Frederick Tyler, Product Manager in Microsoft
-            </p>
-           </div>
-           <div>
-             {"---->"}
-           </div>
+              <p
+                className={css({
+                  fontSize: "28px",
+                  fontStyle: "italic",
+                  fontWeight: "100",
+                  textAlign: "center"
+                })}
+              >
+                “egghead is the best training I’ve seen so far – cutting edge
+                with the latest subjects, frameworks, languages – no bull….!”
+              </p>
+              <p
+                className={css({
+                  fontSize: "16px",
+                  fontWeight: "100",
+                  color: "#999",
+                  marginTop: "32px",
+                  textAlign: "center"
+                })}
+              >
+                Frederick Tyler, Product Manager in Microsoft
+              </p>
+            </div>
+            <div>{"---->"}</div>
           </div>
 
           {/* FAQ */}
