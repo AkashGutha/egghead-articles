@@ -76,54 +76,58 @@ class PricingTierCard extends Component {
         </p>
 
         {/* discount */}
-        <div
-          className={css({
-            margin: "0px -10px",
-            marginTop: "32px",
-            backgroundColor: "#888",
-            display: "flex",
-            padding: "20px 40px",
-            justifyContent: "space-between",
-            color: "white",
-            alignItems: "center",
-            background: `repeating-linear-gradient(
+        {this.props.discount !== undefined ? (
+          <div
+            className={css({
+              margin: "0px -10px",
+              marginTop: "32px",
+              backgroundColor: "#888",
+              display: "flex",
+              padding: "20px 40px",
+              justifyContent: "space-between",
+              color: "white",
+              alignItems: "center",
+              background: `repeating-linear-gradient(
               45deg,
               #666,
               #666 10px,
               #333 10px,
               #333 12px
             )`,
-            ":before": {
-              height: "76px",
-              width: "100px",
-              display: "block",
-              position: "absolute",
-              zIndex: "-10",
-              content: " ",
-              background: "#222",
-              marginLeft: "-40px",
-              marginTop: "-34px",
-              transform: "skewY(-18deg)",
-              transformOrigin: "top right"
-            },
-            ":after": {
-              height: "76px",
-              width: "100px",
-              display: "block",
-              position: "absolute",
-              zIndex: "-10",
-              content: " ",
-              background: "#222",
-              marginTop: "-34px",
-              transform: "skewY(18deg)",
-              transformOrigin: "top left",
-              marginLeft: "260px"
-            }
-          })}
-        >
-          <p className={css({ fontSize: "30px" })}>SAVE 50%</p>
-          <p className={css({ fontSize: "15px" })}>usually 299,99$</p>
-        </div>
+              ":before": {
+                height: "76px",
+                width: "100px",
+                display: "block",
+                position: "absolute",
+                zIndex: "-10",
+                content: " ",
+                background: "#222",
+                marginLeft: "-40px",
+                marginTop: "-34px",
+                transform: "skewY(-18deg)",
+                transformOrigin: "top right"
+              },
+              ":after": {
+                height: "76px",
+                width: "100px",
+                display: "block",
+                position: "absolute",
+                zIndex: "-10",
+                content: " ",
+                background: "#222",
+                marginTop: "-34px",
+                transform: "skewY(18deg)",
+                transformOrigin: "top left",
+                marginLeft: "260px"
+              }
+            })}
+          >
+            <p className={css({ fontSize: "30px" })}>SAVE 50%</p>
+            <p className={css({ fontSize: "15px" })}>usually 299,99$</p>
+          </div>
+        ) : (
+          <div />
+        )}
 
         {/* rate */}
         <div
@@ -177,44 +181,48 @@ class PricingTierCard extends Component {
               color: "#AAA",
               letterSpacing: "2px",
               fontSize: "12px",
-              alignSelf: "center"
+              alignSelf: "center",
+              marginBottom: "20px"
             })}
           >
             PER USER / BILLED ANUALLY
           </p>
 
-          <div
-            className={css({
-              backgroundColor: "#ddd",
-              display: "flex",
-              flexDirection: "column",
-              flexBasis: "100%",
-              marginTop: "20px"
-            })}
-          >
-            <p
-              className={css({
-                marginTop: "12px",
-                marginBottom: "18px",
-                alignSelf: "center"
-              })}
-            >
-              deal ends in
-            </p>
+          {this.props.discount !== undefined ? (
             <div
               className={css({
+                backgroundColor: "#ddd",
                 display: "flex",
-                flexDirection: "row",
-                justifyContent: "space-around",
-                marginBottom: "12px"
+                flexDirection: "column",
+                flexBasis: "100%"
               })}
             >
-              <TimeText topText="4" bottomText="DAYS" />
-              <TimeText topText="23" bottomText="HOURS" />
-              <TimeText topText="34" bottomText="MINUTES" />
-              <TimeText topText="45" bottomText="SECONDS" />
+              <p
+                className={css({
+                  marginTop: "12px",
+                  marginBottom: "18px",
+                  alignSelf: "center"
+                })}
+              >
+                deal ends in
+              </p>
+              <div
+                className={css({
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-around",
+                  marginBottom: "12px"
+                })}
+              >
+                <TimeText topText="4" bottomText="DAYS" />
+                <TimeText topText="23" bottomText="HOURS" />
+                <TimeText topText="34" bottomText="MINUTES" />
+                <TimeText topText="45" bottomText="SECONDS" />
+              </div>
             </div>
-          </div>
+          ) : (
+            <div />
+          )}
         </div>
 
         {/* level up */}
@@ -271,12 +279,12 @@ class PricingTierCard extends Component {
         </ul>
 
         {/* other features */}
-        <div
+        {/* <div
           className={css({
             border: "1px solid #ddd",
             display: "flex",
             alignSelf: "center",
-            alignItems:"center",
+            alignItems: "center",
             justifyContent: "space-between",
             fontSize: "15px",
             width: "300px",
@@ -288,7 +296,7 @@ class PricingTierCard extends Component {
           <p> + </p>
           <p> {"all pro and premium features"} </p>
           <p> > </p>
-        </div>
+        </div> */}
       </div>
     );
   }

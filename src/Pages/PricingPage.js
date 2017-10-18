@@ -220,16 +220,20 @@ const PricingPageObserver = observer(
                 margin: "15px -15px"
               })}
             >
-              <div className={css({
-                backgroundColor: "black",
-                height: "1px",
-              })}/>
-              <div className={css({
-                backgroundColor: "black",
-                height: "3px",
-                width: "90px",
-                transform: "translateY(-3px)"
-              })}/>
+              <div
+                className={css({
+                  backgroundColor: "black",
+                  height: "1px"
+                })}
+              />
+              <div
+                className={css({
+                  backgroundColor: "black",
+                  height: "3px",
+                  width: "90px",
+                  transform: "translateY(-3px)"
+                })}
+              />
             </div>
           </div>
 
@@ -241,12 +245,22 @@ const PricingPageObserver = observer(
               flexWrap: "wrap",
               justifyContent: "center",
               padding: "0px 65px",
-              paddingBottom: "50px"
+              paddingBottom: "50px",
+              flexBasis: "flex-start"
             })}
           >
+            <PricingTierCard
+              discount={{
+                percentage: 50,
+                openTill: new Date()
+              }}
+            />
             <PricingTierCard />
-            <PricingTierCard />
-            <PricingTierCard />
+            <PricingTierCard 
+              discount={{
+                percentage: 50,
+                openTill: new Date()
+              }}/>
           </div>
 
           {/* testimonials */}
