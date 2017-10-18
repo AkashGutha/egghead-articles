@@ -215,11 +215,22 @@ const PricingPageObserver = observer(
                 Monthly
               </p>
             </div>
-            <hr
+            <div
               className={css({
-                margin: "15px -10px"
+                margin: "15px -15px"
               })}
-            />
+            >
+              <div className={css({
+                backgroundColor: "black",
+                height: "1px",
+              })}/>
+              <div className={css({
+                backgroundColor: "black",
+                height: "3px",
+                width: "90px",
+                transform: "translateY(-3px)"
+              })}/>
+            </div>
           </div>
 
           {/* pricing tier cards */}
