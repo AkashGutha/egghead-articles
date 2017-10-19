@@ -41,10 +41,7 @@ class PricingTierCard extends Component {
           marginRight: "20px",
           marginTop: "150px",
           border: "1px solid black",
-          backgroundColor: "white",
-          "@media only screen and (max-width: 768px)": {
-            width: "100%"
-          }
+          backgroundColor: "white"
         })}
       >
         <div
