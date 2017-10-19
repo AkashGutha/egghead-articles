@@ -371,6 +371,7 @@ const PricingPageObserver = observer(
           <div
             className={css({
               padding: "125px",
+              paddingBottom: "40px",
               "@media only screen and (max-width: 768px)": {
                 padding: "25px"
               }
