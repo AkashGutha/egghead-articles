@@ -99,7 +99,12 @@ const PricingPageObserver = observer(
               paddingBottom: "0px",
               padding: "125px",
               paddingTop: "80px",
-              justifyContent: "space-between"
+              justifyContent: "space-between",
+              "@media only screen and (max-width: 768px)": {
+                padding: "50px",
+                justifyContent: "center",
+                textAlign: "center"
+              }
             })}
           >
             <p
@@ -107,7 +112,10 @@ const PricingPageObserver = observer(
                 width: "438px",
                 fontSize: "40px",
                 flexBasis: "30%",
-                alignSelf: "center"
+                alignSelf: "center",
+                "@media only screen and (max-width: 768px)": {
+                  flexBasis: "100%"
+                }
               })}
             >
               Invest in your programming skills
@@ -121,7 +129,10 @@ const PricingPageObserver = observer(
                 boxSizing: "border-box",
                 padding: "30px",
                 justifyContent: "space-between",
-                alignItems: "center"
+                alignItems: "center",
+                "@media only screen and (max-width: 768px)": {
+                  display: "none"
+                }
               })}
             >
               <div>
@@ -246,7 +257,10 @@ const PricingPageObserver = observer(
               justifyContent: "center",
               padding: "0px 65px",
               paddingBottom: "50px",
-              flexBasis: "flex-start"
+              flexBasis: "flex-start",
+              "@media only screen and (max-width: 768px)": {
+                padding: "50px"
+              }
             })}
           >
             <PricingTierCard
@@ -272,10 +286,13 @@ const PricingPageObserver = observer(
               height: "200px",
               backgroundColor: "#f8f8f8",
               justifyContent: "space-between",
-              alignItems: "center"
+              alignItems: "center",
+              "@media only screen and (max-width: 768px)": {
+                padding: "100px 25px"
+              }
             })}
           >
-            <div>{"<----"}</div>
+            <div>{"<---"}</div>
 
             <div
               className={css({
@@ -347,13 +364,16 @@ const PricingPageObserver = observer(
                 })}
               </div>
             </div>
-            <div>{"---->"}</div>
+            <div>{"--->"}</div>
           </div>
 
           {/* FAQ */}
           <div
             className={css({
-              padding: "125px"
+              padding: "125px",
+              "@media only screen and (max-width: 768px)": {
+                padding: "25px"
+              }
             })}
           >
             <h1>FAQ</h1>
@@ -363,7 +383,10 @@ const PricingPageObserver = observer(
                 display: "flex",
                 flexDirection: "row",
                 flexWrap: "wrap",
-                justifyContent: "space-between"
+                justifyContent: "space-between",
+                "@media only screen and (max-width: 768px)": {
+                  flexDirection: "column"
+                }
               })}
             >
               {faqs}
@@ -374,7 +397,12 @@ const PricingPageObserver = observer(
                 backgroundColor: "#333",
                 padding: "70px",
                 color: "white",
-                marginTop: "100px"
+                justifyContent: "flex-start",
+                marginTop: "100px",
+                "@media only screen and (max-width: 768px)": {
+                  display: "flex",
+                  flexDirection: "column"
+                }
               })}
             >
               <p
