@@ -39,7 +39,16 @@ const FaqQna = ({ question, answer }) => (
     <p
       className={css({
         fontSize: "22px",
-        fontWeight: "600"
+        fontWeight: "600",
+        "@media only screen and (max-width: 768px)": {
+          boxSizing: "border-box",
+          paddingLeft: "40px",
+          ":before": {
+            content: ">",
+            position: "absolute",
+            marginLeft: "-40px"
+          }
+        }
       })}
     >
       {question}
@@ -48,7 +57,10 @@ const FaqQna = ({ question, answer }) => (
       className={css({
         fontSize: "22px",
         fontWeight: "300",
-        marginTop: "25px"
+        marginTop: "25px",
+        "@media only screen and (max-width: 768px)": {
+          display: "none"
+        }
       })}
     >
       {answer}
@@ -409,7 +421,7 @@ const PricingPageObserver = observer(
                 "@media only screen and (max-width: 768px)": {
                   display: "flex",
                   flexDirection: "column",
-                  marginTop:"25px"
+                  marginTop: "25px"
                 }
               })}
             >
