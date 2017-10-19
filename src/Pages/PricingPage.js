@@ -274,11 +274,7 @@ const PricingPageObserver = observer(
               flexWrap: "wrap",
               justifyContent: "center",
               padding: "0px 65px",
-              paddingBottom: "50px",
-              flexBasis: "flex-start",
-              "@media only screen and (max-width: 768px)": {
-                padding: "50px"
-              }
+              paddingBottom: "50px"
             })}
           >
             <PricingTierCard
