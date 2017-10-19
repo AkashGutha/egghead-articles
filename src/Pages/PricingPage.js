@@ -256,11 +256,12 @@ const PricingPageObserver = observer(
               }}
             />
             <PricingTierCard />
-            <PricingTierCard 
+            <PricingTierCard
               discount={{
                 percentage: 50,
                 openTill: new Date()
-              }}/>
+              }}
+            />
           </div>
 
           {/* testimonials */}
@@ -280,7 +281,7 @@ const PricingPageObserver = observer(
               className={css({
                 display: "felx",
                 flexBasis: "80%",
-                justifyContent: "center"
+                justifyContent: "space-around"
               })}
             >
               <p
@@ -305,6 +306,46 @@ const PricingPageObserver = observer(
               >
                 Frederick Tyler, Product Manager in Microsoft
               </p>
+              <div
+                className={css({
+                  display: "flex",
+                  marginLeft: "16px",
+                  marginTop: "32px",
+                  alignItems: "center",
+                  justifyContent: "center"
+                })}
+              >
+                {[1, 2, 3, 4].map(index => {
+                  if (index === 2) {
+                    return (
+                      <div
+                        className={css({
+                          width: "32px",
+                          height: "32px",
+                          backgroundColor: "#ccc",
+                          boxShadow: "2px 2px 2px lightgray",
+                          marginLeft: "-8px",
+                          borderRadius: "32px",
+                          marginTop: "-16px"
+                        })}
+                      />
+                    );
+                  } else {
+                    return (
+                      <div
+                        className={css({
+                          width: "32px",
+                          height: "32px",
+                          backgroundColor: "#ccc",
+                          boxShadow: "2px 2px 2px lightgray",
+                          marginLeft: "-8px",
+                          borderRadius: "32px"
+                        })}
+                      />
+                    );
+                  }
+                })}
+              </div>
             </div>
             <div>{"---->"}</div>
           </div>
