@@ -100,7 +100,7 @@ const PricingPageObserver = observer(
               padding: "125px",
               paddingTop: "80px",
               justifyContent: "space-between",
-              "@media only screen and (max-width: 768px)": {
+              "@media only screen and (max-width: 972px)": {
                 padding: "50px",
                 justifyContent: "center",
                 textAlign: "center"
@@ -114,6 +114,9 @@ const PricingPageObserver = observer(
                 flexBasis: "30%",
                 alignSelf: "center",
                 "@media only screen and (max-width: 768px)": {
+                  flexBasis: "100%"
+                },
+                "@media only screen and (max-width: 972px)": {
                   flexBasis: "100%"
                 }
               })}
@@ -131,6 +134,9 @@ const PricingPageObserver = observer(
                 justifyContent: "space-between",
                 alignItems: "center",
                 "@media only screen and (max-width: 768px)": {
+                  display: "none"
+                },
+                "@media only screen and (max-width: 972px)": {
                   display: "none"
                 }
               })}
@@ -240,9 +246,9 @@ const PricingPageObserver = observer(
               <div
                 className={css({
                   backgroundColor: "black",
-                  height: "3px",
+                  height: "4px",
                   width: "90px",
-                  transform: "translateY(-3px)"
+                  transform: "translateY(-5px)"
                 })}
               />
             </div>
@@ -373,7 +379,7 @@ const PricingPageObserver = observer(
               padding: "125px",
               paddingBottom: "40px",
               "@media only screen and (max-width: 768px)": {
-                padding: "25px"
+                padding: "20px"
               }
             })}
           >
@@ -402,7 +408,8 @@ const PricingPageObserver = observer(
                 marginTop: "100px",
                 "@media only screen and (max-width: 768px)": {
                   display: "flex",
-                  flexDirection: "column"
+                  flexDirection: "column",
+                  marginTop:"25px"
                 }
               })}
             >
