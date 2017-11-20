@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { css } from "glamor";
 
 import { categoryTextStyle } from "./../Styles/TextStyles";
+import { articleTitle } from "./../Styles/TextStyles";
+import { authorName } from "./../Styles/TextStyles";
+import { publishedDate } from "./../Styles/TextStyles";
 
 class SmallCardPost extends Component {
   render() {
@@ -30,28 +33,31 @@ class SmallCardPost extends Component {
           className={css({
             height: "240px",
             width: "360px",
-            background: "url(https://d1ax1i5f2y3x71.cloudfront.net/items/0h431L1m1g0H3w2B1R1E/article-thumbnail-placeholder@2x.png) 50% 50% no-repeat blue",
+            background: "url(https://d1ax1i5f2y3x71.cloudfront.net/items/0h431L1m1g0H3w2B1R1E/article-thumbnail-placeholder@2x.png) 50% 50% no-repeat white",
             backgroundSize: "360px",
-            borderRadius: "5px"
+            borderRadius: "5px",
           })}
         />
-
-        <p className={categoryTextStyle}>{category.toUpperCase()}</p>
-        <p
-          className={css({
-            fontSize: "1.5em",
-            marginLeft: "20px"
-          })}
+        
+        <div
+         className={css({
+            padding: "0 20px 0 20px"
+        })}
         >
+            
+                     
+        <p className={categoryTextStyle}>{category.toUpperCase()}</p>
+        <h3
+          className={articleTitle}>
           {content.title}
-        </p>
+        </h3>
         <p
           className={css({
-            height: "58px",
+           /* maxHeight: "50px",
+            minHeight: "50px", */
             marginTop: "7px",
             fontWeight: "thin",
             opacity: "0.5",
-            marginLeft: "20px"
           })}
         >
           {content.subtitle}
@@ -61,7 +67,7 @@ class SmallCardPost extends Component {
           className={css({
             display: "flex",
             flexDirection: "row",
-            marginTop: "20px"
+            marginTop: "40px"
           })}
         >
           <div
@@ -72,6 +78,7 @@ class SmallCardPost extends Component {
               backgroundColor: "#D8D8D8",
               borderRadius: "32px",
               marginRight: "10px",
+              
             })}
           />
 
@@ -80,26 +87,18 @@ class SmallCardPost extends Component {
               display: "flex",
               flexDirection: "column",
               alignSelf: "center",
-              marginLeft: "0px"
+
             })}
           >
             <p
-              className={css({
-                fontSize: "14px",
-                lineHeight: "20px"
-              })}
-            >
+              className={authorName}>
               {author}
             </p>
             <p
-              className={css({
-                fontSize: "12px",
-                lineHeight: "20px",
-                opacity: "0.4"
-              })}
-            >
+              className={publishedDate}>
               {formattedPublishedDate}
             </p>
+            </div>
           </div>
         </div>
       </div>

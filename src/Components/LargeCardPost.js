@@ -26,9 +26,8 @@ class LargeCardPost extends Component {
         className={css({
           display: "flex",
           flexDirection: "row",
-          padding: "10px",
+          margin: "30px",        
           ":hover": {
-            boxShadow: "0px 0px 2px lightgray",
             cursor: "pointer"
           }
         })}
@@ -36,10 +35,10 @@ class LargeCardPost extends Component {
         <div
           className={css({
             width: "760px",
-            height: "500px",
+            height: "480px",
             opacity: "0.1",
             backgroundColor: "black",
-            marginLeft: "10px"
+            borderRadius: "5px"
           })}
         />
 
@@ -47,8 +46,7 @@ class LargeCardPost extends Component {
           className={css({
             display: "flex",
             flexDirection: "column",
-            marginLeft: "32px",
-            marginTop: "24px",
+            marginLeft: "40px",
             width: "370px"
           })}
         >
@@ -70,7 +68,6 @@ class LargeCardPost extends Component {
               fontWeight: "thin",
               opacity: "0.5",
               height: "290px",
-              textAlign: "justify",
               marginTop: "10px",
               lineHeight: "24px"
             })}
