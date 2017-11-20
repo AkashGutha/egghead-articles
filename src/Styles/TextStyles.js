@@ -6,5 +6,6 @@ export const categoryTextStyle = css({
   letterSpacing: "3px",
   lineHeight: "24px",
   opacity: "0.5",
-  fontSize: "12px"
+  fontSize: "12px",
+  padding: "0 0 0 20px"
 });

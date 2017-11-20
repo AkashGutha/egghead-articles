@@ -19,10 +19,9 @@ class SmallCardPost extends Component {
         className={css({
           display: "flex",
           flexDirection: "column",
-          padding: "10px",
-          width: "370px",
+          margin: "20px",
+          width: "360px",
           ":hover": {
-            boxShadow: "0px 0px 2px lightgray",
             cursor: "pointer"
           }
         })}
@@ -30,16 +29,18 @@ class SmallCardPost extends Component {
         <div
           className={css({
             height: "240px",
-            width: "370px",
-            opacity: "0.1",
-            backgroundColor: "black"
+            width: "360px",
+            background: "url(https://d1ax1i5f2y3x71.cloudfront.net/items/0h431L1m1g0H3w2B1R1E/article-thumbnail-placeholder@2x.png) 50% 50% no-repeat blue",
+            backgroundSize: "360px",
+            borderRadius: "5px"
           })}
         />
 
         <p className={categoryTextStyle}>{category.toUpperCase()}</p>
         <p
           className={css({
-            fontSize: "1.5em"
+            fontSize: "1.5em",
+            marginLeft: "20px"
           })}
         >
           {content.title}
@@ -49,7 +50,8 @@ class SmallCardPost extends Component {
             height: "58px",
             marginTop: "7px",
             fontWeight: "thin",
-            opacity: "0.5"
+            opacity: "0.5",
+            marginLeft: "20px"
           })}
         >
           {content.subtitle}
@@ -69,7 +71,7 @@ class SmallCardPost extends Component {
               border: "1px solid #D8D8D8",
               backgroundColor: "#D8D8D8",
               borderRadius: "32px",
-              marginRight: "10px"
+              marginRight: "10px",
             })}
           />
 
@@ -78,7 +80,7 @@ class SmallCardPost extends Component {
               display: "flex",
               flexDirection: "column",
               alignSelf: "center",
-              marginLeft: "12px"
+              marginLeft: "0px"
             })}
           >
             <p
