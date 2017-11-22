@@ -60,7 +60,7 @@ export const topicTitle = css({
 /* Article Detail Text Styles */
 
 export const articleBody = css({
-    fontFamily: "'KievitSlabWeb W03 Medium'",
+    fontFamily: "'KievitSlabWeb W03 Regul1473175'",
     fontSize: "20px",
     lineHeight: "32px",
     marginTop: "80px",
