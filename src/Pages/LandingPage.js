@@ -3,6 +3,7 @@ import { css } from "glamor";
 import { observer } from "mobx-react";
 import { withRouter, Link } from "react-router-dom";
 
+
 import Header from "./../Components/Header";
 import Paginator from "./../Components/Paginator";
 import SmallCardPost from "./../Components/SmallCardPost";
@@ -62,17 +63,21 @@ const LandingPageObserver = observer(
           >
             <TopicsTabs />
           </nav>
-          <section
+          <section class="center"
             className={css({
               display: "flex",
               marginTop: "60px",
+              marginLeft: "auto",
+              marginRight: "auto",
               justifyContent: "center",
               paddingRight: "20px",
               paddingLeft: "20px",
               flexWrap: "wrap",
-              alignContent: "stretch"
+                       maxWidth: "1400px",
+              alignContent: "stretch",
             })}
           >
+     
             {articles.map((article, index) => {
               if (index === 3 && this.state.width > 1200) {
                 return (
@@ -119,6 +124,7 @@ const LandingPageObserver = observer(
                 );
               }
             })}
+          
           </section>
 
           <section
