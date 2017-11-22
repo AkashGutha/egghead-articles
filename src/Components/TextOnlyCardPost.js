@@ -26,7 +26,7 @@ class SmallCardPost extends Component {
         className={css({
           display: "flex",
           flexDirection: "column",
-          width: "320px",
+
         padding: "0 20px 0 20px",
         margin: "20px",
           ":hover": {
