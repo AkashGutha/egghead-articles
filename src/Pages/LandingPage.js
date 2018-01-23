@@ -18,7 +18,6 @@ const LandingPageObserver = observer(
     };
 
     componentWillReact() {
-      console.log("I will re-render, since the observables changed!");
     }
 
     componentWillMount() {
@@ -34,14 +33,10 @@ const LandingPageObserver = observer(
 
     updateDimensions = () => {
       this.setState({ width: window.innerWidth });
-      console.log("dimensions updated");
-      console.log(this.state);
     };
 
     render() {
       const articles = this.props.store.articles;
-
-      console.log(this.props);
 
       if (articles === undefined) {
         return <h1> Loading.... </h1>;

@@ -18,13 +18,10 @@ const ArticleDetailPage = observer(
     };
 
     componentDidMount() {
-      console.log("article page rendered");
     }
 
     render() {
-      console.log(this.props);
       const id = this.props.match.params.id;
-      console.log(id);
       const article = this.props.store.articles.find(
         article => article.articleId === id
       );
